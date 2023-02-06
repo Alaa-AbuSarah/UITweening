@@ -1,0 +1,1 @@
+public enum UITweeningType { None, OnEnable, OnStart, OnRequest }
