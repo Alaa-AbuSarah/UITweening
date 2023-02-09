@@ -48,10 +48,6 @@ public class UITweening : MonoBehaviour
     private Image _image;
     #endregion
 
-    #region Event
-    public UnityEvent _onBegin;
-    #endregion
-
     #region Private Variables
     private RectTransform _rect;
     #endregion
@@ -81,8 +77,6 @@ public class UITweening : MonoBehaviour
 
     private void Tweening()
     {
-        _onBegin.Invoke();
-
         if (doSizeDelta)
         {
             _rect.anchoredPosition = startSizeDelta;
