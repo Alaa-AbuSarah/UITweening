@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.Events;
 using TMPro;
-using System.Threading.Tasks;
 
 [RequireComponent(typeof(RectTransform))]
 public class UITweening : MonoBehaviour
