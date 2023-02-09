@@ -10,43 +10,52 @@ using System.Threading.Tasks;
 [RequireComponent(typeof(RectTransform))]
 public class UITweening : MonoBehaviour
 {
+    #region Settings
     public UITweeningType whenDo = UITweeningType.OnEnable;
-    [Tooltip("Delay in Second")] public float tweeningDelay = 0f;
+    public float tweeningDelay = 0f;
+    #endregion
 
-    [Header("Size Delta")]
+    #region Size Delta
     public bool doSizeDelta = false;
     public Vector2 startSizeDelta = Vector2.zero;
     public Vector2 endSizeDelta = Vector2.one;
     public float durationSizeDelta = 0.25f;
     public Ease easeSizeDelta = Ease.Linear;
+    #endregion
 
-    [Header("Scale")]
+    #region Scale
     public bool doScale = false;
     public Vector3 startScale = Vector3.zero;
     public Vector3 endScale = Vector3.one;
     public float durationScale = 0.25f;
     public Ease easeScale = Ease.Linear;
+    #endregion
 
-    [Header("TMP Text Color")]
+    #region TMP Text Color
     public bool doTextColor = false;
     public Color startTextColor = new Color(1, 1, 1, 0);
     public Color endTextColor = Color.white;
     public float durationTextColor = 0.25f;
     public Ease easeTextColor = Ease.Linear;
     private TMP_Text _text;
+    #endregion
 
-    [Header("Image Color")]
+    #region Image Color
     public bool doImageColor = false;
     public Color startImageColor = new Color(1, 1, 1, 0);
     public Color endImageColor = Color.white;
     public float durationImageColor = 0.25f;
     public Ease easeImageColor = Ease.Linear;
     private Image _image;
+    #endregion
 
-    [Space(25)]
+    #region Event
     public UnityEvent _onBegin;
+    #endregion
 
+    #region Private Variables
     private RectTransform _rect;
+    #endregion
 
     private void Awake()
     {
