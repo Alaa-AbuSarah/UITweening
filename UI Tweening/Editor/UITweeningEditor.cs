@@ -38,10 +38,6 @@ public class UITweeningEditor : Editor
         else if (scale) ScaleTab();
         else if (tMPTextColor) TMPTextColorTab();
         else if (imageColor) ImageColorTab();
-
-        EditorGUILayout.Space();
-
-        EditorGUILayout.PropertyField(this.serializedObject.FindProperty("_onBegin"), true);
     }
 
     private void SizeDeltaTab()
